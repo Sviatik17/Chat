@@ -23,28 +23,66 @@ input{
     width: 80%;
     height: 10vh;
     border-radius: 20px;
+    font-size: 24px;
 
 }
+#smileIcon{
+    font-size: 38px;
+}
 button{
-    width: 100px ;
-    height: 40px;
-    border-radius: 20px;
-    background-color: rgb(58, 248, 0);
-    border: none;
-    color: #fff;
+    width: 0px ;
+    height: 0px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i{
+        font-size: 38px;
+        cursor: pointer;
+    }
+
 }
 ul{
     position: relative;
     right: 600px;
     top: 50px;
     list-style-type: none;
+    font-size: 24px;
+   
 }
 li{
     min-width: min-content;
-    height: 30px;
-    background-color: rgb(247, 142, 57);
+    height: 35px;
+    background-color: #999;
     margin: 10px;
     border-radius: 10px;
-    text-align: center;
+    /* text-align: center; */
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup{
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 3px #333;
+    position: absolute;
+    /* bottom: 400px; */
+    left: 1200px;
+    top: 370px;
+
+}
+.row{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: red; */
+    font-size: 28px;
+
+}
+.emoji{
+    cursor: pointer;
 }
