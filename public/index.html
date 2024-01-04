@@ -8,78 +8,111 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js" integrity="sha512-zoJXRvW2gC8Z0Xo3lBbao5+AS3g6YWr5ztKqaicua11xHo+AvE1b0lT9ODgrHTmNUxeCw0Ry4BGRYZfXu70weg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css' integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==' crossorigin='anonymous'/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
  <link rel="stylesheet" href="./style.css">   
 </head>
 <body>
+   
     <div class="wrap">
-        <ul id="messages" class="messages">
-
-        </ul>
+        <main>
+            <div class="leftMain">
+                <ul id="messages" class="messages">
+        
+                </ul></div>
+            <div class="rightMain">
+                <i class="fa-solid fa-gear" id="settingsIcon"></i>
+                <div class="settings">
+                    <i class="fa-solid fa-xmark" id="close"></i>
+                    <p>Backgrounds</p>
+                    <div class="rows">
+                        <div class="bg" id="bg1"></div>
+                        <div class="bg" id="bg2"></div>
+                        <div class="bg" id="bg3"></div>
+                    </div>
+                    <div class="rows">
+                        <div class="bg" id="bg4"></div>
+                        <div class="bg" id="bg5"></div>
+                        <div class="bg" id="bg6"></div>
+                    </div>
+                    <div class="rows">
+                        <div class="bg" id="bg7"></div>
+                        <div class="bg" id="bg8"></div>
+                        <div class="bg" id="bg9"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+         
+        
+       
         <form id="form" class="form">
             <input type="text" placeholder="Введи повідомлення" id="message_info" class="message_info">
             
             <i class="fa-regular fa-face-smile" id="smileIcon"></i>
+            <div class="popup">
+                <div class="row">
+                    <div class="emoji" id="emoji1">&#128512</div>
+                    <div class="emoji" id="emoji2">&#128513</div>
+                    <div class="emoji" id="emoji3">&#128514</div>
+                    <div class="emoji" id="emoji4">&#128515</div>
+                    <div class="emoji" id="emoji5">&#128516</div>
+                    <div class="emoji" id="emoji6">&#128517</div>
+    
+                </div>
+                <div class="row">
+                    <div class="emoji" id="emoji7">&#128518</div>
+                    <div class="emoji" id="emoji8">&#128519</div>
+                    <div class="emoji" id="emoji9">&#128520</div>
+                    <div class="emoji" id="emoji10">&#128521</div>
+                    <div class="emoji" id="emoji11">&#128522</div>
+                    <div class="emoji" id="emoji12">&#128523</div>
+    
+                </div>
+                <div class="row">
+                    <div class="emoji" id="emoji13">&#128524</div>
+                    <div class="emoji" id="emoji14">&#128525</div>
+                    <div class="emoji" id="emoji15">&#128526</div>
+                    <div class="emoji" id="emoji16">&#128527</div>
+                    <div class="emoji" id="emoji17">&#128528</div>
+                    <div class="emoji" id="emoji18">&#128529</div>
+    
+                </div>
+                <div class="row">
+                    <div class="emoji" id="emoji19">&#128530</div>
+                    <div class="emoji" id="emoji20">&#128531</div>
+                    <div class="emoji" id="emoji21">&#128533</div>
+                    <div class="emoji" id="emoji22">&#128534</div>
+                    <div class="emoji" id="emoji23">&#128535</div>
+                    <div class="emoji" id="emoji24">&#128536</div>
+    
+                </div>
+                <div class="row">
+                    <div class="emoji" id="emoji25">&#128537</div>
+                    <div class="emoji" id="emoji26">&#128539</div>
+                    <div class="emoji" id="emoji27">&#128540</div>
+                    <div class="emoji" id="emoji28">&#128541</div>
+                    <div class="emoji" id="emoji29">&#128542</div>
+                    <div class="emoji" id="emoji30">&#128545</div>
+    
+                </div>
+                <div class="row">
+                    <div class="emoji" id="emoji31">&#128074</div>
+                    <div class="emoji" id="emoji32">&#128076</div>
+                    <div class="emoji" id="emoji33">&#128077</div>
+                    <div class="emoji" id="emoji34">&#128078</div>
+                    <div class="emoji" id="emoji35">&#128079</div>
+                    <div class="emoji" id="emoji36">&#128075</div>
+    
+                </div>
+           
+    
+            </div>
             <button class="btn"><i class="fa-regular fa-paper-plane"></i></button>
+            
         </form>
 
-        <div class="popup">
-            <div class="row">
-                <div class="emoji" id="emoji1">&#128512</div>
-                <div class="emoji" id="emoji2">&#128513</div>
-                <div class="emoji" id="emoji3">&#128514</div>
-                <div class="emoji" id="emoji4">&#128515</div>
-                <div class="emoji" id="emoji5">&#128516</div>
-                <div class="emoji" id="emoji6">&#128517</div>
-
-            </div>
-            <div class="row">
-                <div class="emoji" id="emoji7">&#128518</div>
-                <div class="emoji" id="emoji8">&#128519</div>
-                <div class="emoji" id="emoji9">&#128520</div>
-                <div class="emoji" id="emoji10">&#128521</div>
-                <div class="emoji" id="emoji11">&#128522</div>
-                <div class="emoji" id="emoji12">&#128523</div>
-
-            </div>
-            <div class="row">
-                <div class="emoji" id="emoji13">&#128524</div>
-                <div class="emoji" id="emoji14">&#128525</div>
-                <div class="emoji" id="emoji15">&#128526</div>
-                <div class="emoji" id="emoji16">&#128527</div>
-                <div class="emoji" id="emoji17">&#128528</div>
-                <div class="emoji" id="emoji18">&#128529</div>
-
-            </div>
-            <div class="row">
-                <div class="emoji" id="emoji19">&#128530</div>
-                <div class="emoji" id="emoji20">&#128531</div>
-                <div class="emoji" id="emoji21">&#128533</div>
-                <div class="emoji" id="emoji22">&#128534</div>
-                <div class="emoji" id="emoji23">&#128535</div>
-                <div class="emoji" id="emoji24">&#128536</div>
-
-            </div>
-            <div class="row">
-                <div class="emoji" id="emoji25">&#128537</div>
-                <div class="emoji" id="emoji26">&#128539</div>
-                <div class="emoji" id="emoji27">&#128540</div>
-                <div class="emoji" id="emoji28">&#128541</div>
-                <div class="emoji" id="emoji29">&#128542</div>
-                <div class="emoji" id="emoji30">&#128545</div>
-
-            </div>
-            <div class="row">
-                <div class="emoji" id="emoji31">&#128074</div>
-                <div class="emoji" id="emoji32">&#128076</div>
-                <div class="emoji" id="emoji33">&#128077</div>
-                <div class="emoji" id="emoji34">&#128078</div>
-                <div class="emoji" id="emoji35">&#128079</div>
-                <div class="emoji" id="emoji36">&#128075</div>
-
-            </div>
-       
-
-        </div>
+     
+      
     </div>
    <script src="./main.js"></script>
 </body>

@@ -5,6 +5,8 @@ let io = require('socket.io')(http);
 let path =require('path')
 
 app.use(express.static(path.join(__dirname,'public')));
+
+app.use(express.static(path.join(__dirname,'img')));
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
