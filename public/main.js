@@ -75,14 +75,49 @@ $('.emoji').click(function(e){
     console.log(emojiCodes[e.target.id.slice(5)-1])
      $('#message_info').val(  $('#message_info').val()+String.fromCodePoint(emojiCodes[e.target.id.slice(5)-1]));
 })
+
 $('#form').submit(function() {
-   
+
     socket.emit('chat message', $('#message_info').val());
     $('#message_info').val('');
     return false;
+
+   
 });
+
 socket.on('chat message', function(data) {
-    $('#messages').append($('<li>').text(data));
+    if(data!==''){
+        $('#messages').append($('<li>').text(data));
+    }
+   
 });
+
+setInterval(getUsers,500)
+    function getUsers(){
+        axios.get('/getUsers',)
+        .then(res=>{
+            console.log(res.data)
+            $('.users').text(res.data)
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+    }
+    setInterval(point,2000)
+function point(){
+    $('.point').fadeIn(1000);
+    $('.point').fadeOut(1000);
+}
+  
+
+  
+   
+   
+// })
+// socket.on('getStatus',function(data){
+//     console.log
+//     $('.userStatus').text(data)
+// })
+
 
 

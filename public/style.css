@@ -44,7 +44,7 @@ main{
 
 #settingsIcon{
     font-size: 34px;
-    margin-top: 10px;
+    /* margin-bottom: 10px; */
     margin-left: 350px;
     color: #333;
 }
@@ -181,4 +181,29 @@ li{
     margin-top: 5px;
     display: flex;
     justify-content: space-evenly;
+}
+.userStatus{
+    width: 120px;
+    height: 25px;
+    /* background-color: red; */
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pointBlock{
+    width: 25px;
+    height: 25px;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.point{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+
 }

@@ -11,14 +11,27 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-
+let usersCount=0;
 io.on('connection', function (socket) {
-    console.log('a user connected');
+    // console.log('a user connected');
+    usersCount++
+    console.log(usersCount)
     socket.on('chat message', function (msg) {
         io.emit('chat message', msg);
     });
+
+    socket.on('disconnect', function(){
+        // console.log('user disconnected')
+        usersCount--;
+        console.log(usersCount)
+        
+    })
 });
 
+app.get('/getUsers',(req,res)=>{
+    let data=usersCount;
+    res.json(data);
+})
 
 
 http.listen(3000, function () {
