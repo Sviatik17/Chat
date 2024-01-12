@@ -20,48 +20,57 @@ $('#close').click(function(){
 $('#bg1').click(function(){
     $('body').css('background-image', 'url(./img/background1.jpg)')
     $('i').css('color','#fff')
+    $('.userStatus').css('color','#fff')
     $('#close').css('color','#000')
     
 });
 $('#bg2').click(function(){
     $('body').css('background-image', 'url(./img/background2.jpg)')
     $('i').css('color','#fff')
+    $('.userStatus').css('color','#fff')
     $('#close').css('color','#000')
 
 });
 $('#bg3').click(function(){
     $('body').css('background-image', 'url(./img/background4.jpg)')
     $('i').css('color','#000')
+    $('.userStatus').css('color','#000')
     $('#close').css('color','#000')
 });
 $('#bg4').click(function(){
     $('body').css('background-image', 'url(./img/background5.jpg)')
     $('i').css('color','#fff')
+    $('.userStatus').css('color','#fff')
     $('#close').css('color','#000')
 });
 $('#bg5').click(function(){
     $('body').css('background-image', 'url(./img/background10.jpg)')
     $('i').css('color','#fff')
+    $('.userStatus').css('color','#fff')
     $('#close').css('color','#000')
 });
 $('#bg6').click(function(){
     $('body').css('background-image', 'url(./img/background6.webp)')
     $('i').css('color','#000')
+    $('.userStatus').css('color','#000')
     $('#close').css('color','#000')
 });
 $('#bg7').click(function(){
     $('body').css('background-image', 'url(./img/background7.jpg)')
     $('i').css('color','#000')
+    $('.userStatus').css('color','#000')
     $('#close').css('color','#000')
 });
 $('#bg8').click(function(){
     $('body').css('background-image', 'url(./img/background8.jpg)')
     $('i').css('color','#000')
+    $('.userStatus').css('color','#000')
     $('#close').css('color','#000')
 });
 $('#bg9').click(function(){
     $('body').css('background-image', 'url(./img/background9.jpg)')
     $('i').css('color','#fff')
+    $('.userStatus').css('color','#000')
     $('#close').css('color','#000')
 });
 
